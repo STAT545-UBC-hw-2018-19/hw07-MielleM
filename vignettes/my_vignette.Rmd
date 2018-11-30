@@ -1,0 +1,41 @@
+---
+title: "Using getmode to find the mode"
+author: "MielleM"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using getmode to find the mode}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r}
+library(tidyverse)
+library(getmode)
+```
+
+This vignette will give some examples of using the getmode to find the mode or modes of a dataset. 
+
+First, let's create a simple data set to work with. 
+
+```{r}
+allcolors <- c("red", "red", "yellow", "orange", "green", "blue", "purple", "purple", "black", "white")
+```
+
+Next, let's set up the data so that getmode can work with it. Getmode requires an input of a data frame with a single factor. 
+
+```{r}
+color <- group_by(as_data_frame
+         (as_factor
+           (c(allcolors))),
+         value)
+
+color
+```
+
+Now, I'll use `modefunction` to return the modes of color, which are red and purple.  
+
+```{r}
+mode <- modefunction(color)
+```
+

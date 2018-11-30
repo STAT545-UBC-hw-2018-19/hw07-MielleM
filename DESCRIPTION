@@ -1,0 +1,17 @@
+Package: getmode
+Type: Package
+Title: Find the Mode
+Version: 0.1.0
+Authors@R: person("Mielle", "Michaux", email = "melmichaux@gmail.com",
+  role = c("aut", "cre"))
+Description: function that returns the mode or modes of a data set from a factor input.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+Imports: tidyverse
+VignetteBuilder: knitr
